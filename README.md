@@ -138,6 +138,7 @@ sudo nano /etc/hosts
    ```sh
 127.0.0.1   local.example.com
    ```
+![Image](https://github.com/user-attachments/assets/e6b29852-96df-4e38-a6ad-308bd1dc065c)
 
 <h3 align="left">Test with:</h3>
 
@@ -282,6 +283,7 @@ sudo visudo
    ```sh
 www-data ALL=(ALL) NOPASSWD: /usr/local/bin/wp-automate.sh
    ```
+![Image](https://github.com/user-attachments/assets/3611d663-496e-4525-a77b-65e62908e4fa)
 
 <h3 align="left">Test the HTML form:</h3>
 
