@@ -87,7 +87,7 @@ sudo nano wp-config.php
 <h3 align="left">Update the following in above wp-config.php:</h3>
 
    ```sh
-define('DB_NAME', 'wp_example_db');
-define('DB_USER', 'wp_example_user');
-define('DB_PASSWORD', 'your_password');
+define('DB_NAME', 'wp_example_db'); #with your own Database Name
+define('DB_USER', 'wp_example_user'); #with your username
+define('DB_PASSWORD', 'your_password'); #with your password
    ```
