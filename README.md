@@ -1,5 +1,5 @@
 # Wordpress-Automation
-<h1 align="left">Setup Ubuntu and Install LAMP Stack</h1>
+<h2 align="left">Setup Ubuntu and Install LAMP Stack</h2>
 
    ```sh
 sudo apt update && sudo apt upgrade -y
