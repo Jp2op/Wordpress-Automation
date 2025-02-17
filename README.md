@@ -1,2 +1,2 @@
 # Wordpress-Automation
-<h1 align="left">Hi 👋, I'm Jp</h1>
+<h1 align="left">Setup Ubuntu and Install LAMP Stack</h1>
