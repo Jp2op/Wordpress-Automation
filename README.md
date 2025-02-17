@@ -58,3 +58,19 @@ tar -xzvf latest.tar.gz
 sudo cp -r wordpress/* /var/www/local.example.com/public_html/
 sudo chown -R www-data:www-data /var/www/local.example.com/public_html
    ```
+
+<h3 align="left">Create MySQL Database:</h3
+
+   ```sh
+sudo mysql -u root -p
+   ```
+
+<h3 align="left">Commands to create MySQL Database:</h3
+
+   ```sh
+CREATE DATABASE wp_example_db;
+CREATE USER 'wp_example_user'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON wp_example_db.* TO 'wp_example_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+   ```
