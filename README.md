@@ -3,6 +3,9 @@
 
    ```sh
 sudo apt update && sudo apt upgrade -y
+   ```
+   
+   ```sh
 sudo apt install -y apache2 mysql-server php libapache2-mod-php php-mysql python3 nodejs npm
    ```
 
@@ -25,7 +28,13 @@ sudo mysql_secure_installation
 
    ```sh
 sudo mkdir -p /var/www/local.example.com/public_html
+   ```
+
+   ```sh
 sudo chown -R www-data:www-data /var/www/local.example.com
+   ```
+
+   ```sh
 sudo chmod -R 755 /var/www/local.example.com
    ```
 
@@ -45,6 +54,8 @@ sudo chmod -R 755 /var/www/local.example.com
 
    ```sh
 sudo a2ensite local.example.com.conf
+   ```
+   ```sh
 sudo systemctl reload apache2
    ```
 
@@ -54,8 +65,14 @@ sudo systemctl reload apache2
 
    ```sh
 cd /tmp && wget https://wordpress.org/latest.tar.gz
+   ```
+   ```sh
 tar -xzvf latest.tar.gz
+   ```
+   ```sh
 sudo cp -r wordpress/* /var/www/local.example.com/public_html/
+   ```
+   ```sh
 sudo chown -R www-data:www-data /var/www/local.example.com/public_html
    ```
 
@@ -70,9 +87,17 @@ sudo mysql -u root -p
 
    ```sh
 CREATE DATABASE wp_example_db;
+   ```
+   ```sh
 CREATE USER 'wp_example_user'@'localhost' IDENTIFIED BY 'your_password';
+   ```
+   ```sh
 GRANT ALL PRIVILEGES ON wp_example_db.* TO 'wp_example_user'@'localhost';
+   ```
+   ```sh
 FLUSH PRIVILEGES;
+   ```
+   ```sh
 EXIT;
    ```
 
@@ -80,7 +105,11 @@ EXIT;
 
    ```sh
 cd /var/www/local.example.com/public_html
+   ```
+   ```sh
 sudo cp wp-config-sample.php wp-config.php
+   ```
+   ```sh
 sudo nano wp-config.php
    ```
 
@@ -116,7 +145,11 @@ curl http://local.example.com
 
    ```sh
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+   ```
+   ```sh
 chmod +x wp-cli.phar
+   ```
+   ```sh
 sudo mv wp-cli.phar /usr/local/bin/wp
    ```
 
