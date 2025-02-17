@@ -75,3 +75,19 @@ GRANT ALL PRIVILEGES ON wp_example_db.* TO 'wp_example_user'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
    ```
+
+<h3 align="left">Configure wp-config.php:</h3>
+
+   ```sh
+cd /var/www/local.example.com/public_html
+sudo cp wp-config-sample.php wp-config.php
+sudo nano wp-config.php
+   ```
+
+<h3 align="left">Update the following in above wp-config.php:</h3>
+
+   ```sh
+define('DB_NAME', 'wp_example_db');
+define('DB_USER', 'wp_example_user');
+define('DB_PASSWORD', 'your_password');
+   ```
