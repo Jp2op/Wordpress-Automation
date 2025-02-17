@@ -59,13 +59,13 @@ sudo cp -r wordpress/* /var/www/local.example.com/public_html/
 sudo chown -R www-data:www-data /var/www/local.example.com/public_html
    ```
 
-<h3 align="left">Create MySQL Database:</h3
+<h3 align="left">Create MySQL Database:</h3>
 
    ```sh
 sudo mysql -u root -p
    ```
 
-<h3 align="left">Commands to create MySQL Database:</h3
+<h3 align="left">Commands to create MySQL Database:</h3>
 
 
    ```sh
