@@ -38,7 +38,13 @@ sudo chown -R www-data:www-data /var/www/local.example.com
 sudo chmod -R 755 /var/www/local.example.com
    ```
 
-<h3 align="left">File Content:</h3>
+<h3 align="left">Create virtual host config:</h3>
+
+   ```sh
+sudo nano /etc/apache2/sites-available/local.example.com.conf
+   ```
+
+<h3 align="left">Virtual Host Config File:</h3>
 
    ```sh
 <VirtualHost 127.0.0.1:80>
