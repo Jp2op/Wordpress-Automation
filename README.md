@@ -41,4 +41,9 @@ sudo chmod -R 755 /var/www/local.example.com
 </VirtualHost>
    ```
 
+<h3 align="left">Enable the site and reload Apache:</h3>
 
+   ```sh
+sudo a2ensite local.example.com.conf
+sudo systemctl reload apache2
+   ```
