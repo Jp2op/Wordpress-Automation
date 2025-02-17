@@ -171,3 +171,88 @@ sudo -u www-data wp core install --url=${DOMAIN} --title="Site ${DOMAIN}" --admi
 echo "127.0.0.1   ${DOMAIN}" | sudo tee -a /etc/hosts
    ```
 
+<h3 align="left">Make script executable:</h3>
+
+   ```sh
+sudo chmod +x /usr/local/bin/wp-automate.sh
+   ```
+
+<h3 align="left">Test the Script:</h3>
+
+   ```sh
+sudo wp-automate.sh local.test.com
+   ```
+
+<h3 align="left">Verify with:</h3>
+
+   ```sh
+curl http://local.test.com
+   ```
+
+<h1 align="left">Web Form for Custom Domain:</h1>
+
+<h3 align="left">Create HTML form:</h3>
+
+   ```sh
+sudo nano /var/www/html/form.html
+   ```
+
+<h3 align="left">HTML form:</h3>
+
+   ```sh
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domain Setup</title>
+</head>
+<body>
+    <form action="/setup.php" method="POST">
+        <input type="text" name="domain" placeholder="Enter domain (e.g., test)">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+   ```
+
+<h3 align="left">Create PHP script:</h3>
+
+   ```sh
+sudo nano /var/www/html/setup.php
+   ```
+
+<h3 align="left">Script:</h3>
+
+   ```sh
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $domain = 'local.' . $_POST['domain'] . '.com';
+    $output = shell_exec("sudo /usr/local/bin/wp-automate.sh $domain 2>&1");
+    echo "<pre>$output</pre>";
+}
+?>
+```
+
+<h3 align="left">Allow Apache to run the script without a password:</h3>
+
+   ```sh
+sudo visudo
+   ```
+
+<h3 align="left">Add this line:</h3>
+
+   ```sh
+www-data ALL=(ALL) NOPASSWD: /usr/local/bin/wp-automate.sh
+   ```
+
+<h3 align="left">Test the HTML form:</h3>
+
+   ```sh
+curl http://127.0.0.1/form.html
+   ```
+
+<h3 align="left">Post Custom Domain Request to the above HTML form:</h3>
+
+   ```sh
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "domain=testdomain" http://127.0.0.1/setup.php
+   ```
+Plese your custom domain int the place of "testdomain"
