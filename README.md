@@ -65,7 +65,7 @@ sudo a2ensite local.example.com.conf
 sudo systemctl reload apache2
    ```
 
-<h1 align="left">Enable the site and reload Apache:</h1>
+<h1 align="left">WordPress Installation:</h1>
 
 <h3 align="left">Download & Install WordPress:</h3>
 
