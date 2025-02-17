@@ -14,6 +14,7 @@ sudo apt install -y php-curl php-gd php-mbstring php-xml php-zip php-soap php-in
 
 <h1 align="left">Secure MySQL Installation</h1>
 Follow prompts to set root password and secure settings
+ 
    ```sh
 sudo mysql_secure_installation
    ```
