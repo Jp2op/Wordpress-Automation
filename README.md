@@ -47,3 +47,14 @@ sudo chmod -R 755 /var/www/local.example.com
 sudo a2ensite local.example.com.conf
 sudo systemctl reload apache2
    ```
+
+<h1 align="left">Enable the site and reload Apache:</h1>
+
+<h3 align="left">Download & Install WordPress:</h3>
+
+   ```sh
+cd /tmp && wget https://wordpress.org/latest.tar.gz
+tar -xzvf latest.tar.gz
+sudo cp -r wordpress/* /var/www/local.example.com/public_html/
+sudo chown -R www-data:www-data /var/www/local.example.com/public_html
+   ```
