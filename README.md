@@ -67,6 +67,7 @@ sudo mysql -u root -p
 
 <h3 align="left">Commands to create MySQL Database:</h3
 
+
    ```sh
 CREATE DATABASE wp_example_db;
 CREATE USER 'wp_example_user'@'localhost' IDENTIFIED BY 'your_password';
