@@ -91,3 +91,22 @@ define('DB_NAME', 'wp_example_db'); #with your own Database Name
 define('DB_USER', 'wp_example_user'); #with your username
 define('DB_PASSWORD', 'your_password'); #with your password
    ```
+
+<h1 align="left">Update /etc/hosts</h1>
+
+   ```sh
+sudo nano /etc/hosts
+   ```
+
+<h3 align="left">Add:</h3>
+
+   ```sh
+127.0.0.1   local.example.com
+   ```
+
+<h3 align="left">Test with:</h3>
+
+   ```sh
+curl http://local.example.com
+   ```
+
